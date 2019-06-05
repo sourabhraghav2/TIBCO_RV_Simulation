@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <script data-require="angular.js@*" data-semver="1.2.13" src="http://code.angularjs.org/1.2.13/angular.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="../app.js"></script>
+<script src="dmh.js"></script>
+  </head>
+
+  <body ng-app="app" ng-controller="dmh">
+  
+  
+    <div class="form-group" style="padding: 25px;background-color: #94b9e03b; width: 100%;height: 100%;position: fixed;">
+		<H1 align="center">MBX Listener</H1>  
+	    <label for="comment">Host:</label>
+		<textarea class="form-control" rows="1" id="comment" ng-model="host" value="165.114.28.223" style="margin-bottom: 10px;     "></textarea>
+		<label for="comment">Port:</label>
+		<textarea class="form-control" rows="1" id="comment" ng-model="port" value ="5753" style="margin-bottom:  10px;     "></textarea>
+		<button type="button" class="btn btn-outline-secondary"ng-click="initDMH(host,port)">Enable Listener</button>
+		<!-- <button ng-click="request(input)">Request data</button> -->
+		<div> Status : {{status}}  </div>
+		<div ng-show="waiting"> Waiting : {{waiting}} </div>
+		<div ng-show="message"> Alert  : {{message}}  </div>
+		<br>
+		<label for="comment">Listened Data:</label>
+		<textarea class="form-control" rows="5" id="comment" ng-model="output"></textarea>
+    </div>
+  </body>
+
+</html>

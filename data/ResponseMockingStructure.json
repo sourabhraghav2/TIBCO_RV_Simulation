@@ -1,0 +1,96 @@
+{
+  "MODEL_1": {
+    
+    "ATBK.REQ.DUMMY.MAP_QUERY.DAESC204": {
+      "type": "ReqResp",
+      "subject": "ATBK.REQ.DUMMY.MAP_QUERY.DAESC204",
+      "modelName": "MODEL_1",
+      "responseJson": {
+        "MapQueryResponse": {
+          "errorText": "",
+          "refPoints": "",
+          "errorCode": "0"
+        }
+      },
+      "status": "About to connect :: ",
+      "reqName": "ATBK.REQ.DUMMY.MAP_QUERY.DAESC204",
+      "error": true
+    },
+    "ATBK.REQ.DUMMY.MAP_UPDATE.MLENR006": {
+      "type": "ReqResp",
+      "subject": "ATBK.REQ.DUMMY.MAP_UPDATE.MLENR006",
+      "modelName": "MODEL_1",
+      "responseJson": {
+        "MapUpdateResponse": {
+          "errorText": "",
+          "mapUpdateResult": "true",
+          "errorCode": "0"
+        }
+      },
+      "status": "About to connect :: "
+    }
+  },
+  "ENR_LM502": {
+    "ATBK.REQ.DUMMY.MATERIAL_VALIDATE.MLENR003": {
+      "type": "ReqResp",
+      "subject": "ATBK.REQ.DUMMY.MATERIAL_VALIDATE.MLENR003",
+      "modelName": "ENR_LM502",
+      "status": "About to connect :: ",
+      "responseJson": {
+        "MaterialValidationRequest": {
+          "materialId": "N0P728480000",
+          "materialPart": "336100000231"
+        }
+      },
+      "reqName": "ATBK.REQ.DUMMY.MATERIAL_VALIDATE.MLENR003"
+    },
+    "ATBK.REQ.DUMMY.MAP_UPDATE.DAESC204": {
+      "type": "ReqResp",
+      "subject": "ATBK.REQ.DUMMY.MAP_UPDATE.DAESC204",
+      "modelName": "ENR_LM502",
+      "status": "About to connect :: ",
+      "responseJson": {
+        "MapUpdateResponse": {
+          "errorText": "",
+          "mapUpdateResult": "true",
+          "errorCode": "0"
+        }
+      },
+      "reqName": "ATBK.REQ.DUMMY.MAP_UPDATE.DAESC204"
+    },
+    "ATBK.REQ.DUMMY.MAP_QUERY.DAESC204": {
+      "type": "ReqResp",
+      "subject": "ATBK.REQ.DUMMY.MAP_QUERY.DAESC204",
+      "modelName": "ENR_LM502",
+      "responseJson": {
+        "MapQueryResponse": {
+          "errorText": "",
+          "refPoints": "",
+          "errorCode": "0",
+          "mapString": "PD94bWwgdmVyc2lvbj0iMS4wIj8+PE1hcERhdGEgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeHNpOnNjaGVtYUxvY2F0aW9uPSJ1cm46c2VtaS1vcmc6eHNkLkUxNDItMS5WMDUwNS5TdWJzdHJhdGVNYXBfVERTIEUxNDItMS1WMDUwNS1TY2hlbWEtRXh0ZW5zaW9uLnhzZCB1cm46c2VtaS1vcmc6eHNkLkUxNDItMS5WMDUwNS5TdWJzdHJhdGVNYXBfTVdIIEUxNDItMS1WMDUwNS1TY2hlbWEtRXh0ZW5zaW9uLnhzZCB1cm46c2VtaS1vcmc6eHNkLkUxNDItMS5WMDUwNS5TdWJzdHJhdGVNYXAgRTE0Mi0xLVYwNTA1LVNjaGVtYS54c2QiIHhtbG5zOm13aD0idXJuOnNlbWktb3JnOnhzZC5FMTQyLTEuVjA1MDUuU3Vic3RyYXRlTWFwX01XSCIgeG1sbnM6dGRzPSJ1cm46c2VtaS1vcmc6eHNkLkUxNDItMS5WMDUwNS5TdWJzdHJhdGVNYXBfVERTIiB4bWxucz0idXJuOnNlbWktb3JnOnhzZC5FMTQyLTEuVjA1MDUuU3Vic3RyYXRlTWFwIj48TGF5b3V0cz48TGF5b3V0IExheW91dElkPSJTdHJpcE1hcCIgRGVmYXVsdFVuaXRzPSJtbSIgVG9wTGV2ZWw9InRydWUiPjxEaW1lbnNpb24gWD0iMSIgWT0iMSIvPjxEZXZpY2VTaXplIFg9IjI4LjM3NjQiIFk9IjkuMDgzMyIvPjxDaGlsZExheW91dHM+PENoaWxkTGF5b3V0IExheW91dElkPSJEaWVNYXRyaXgiLz48L0NoaWxkTGF5b3V0cz48L0xheW91dD48TGF5b3V0IExheW91dElkPSJEaWVNYXRyaXgiIERlZmF1bHRVbml0cz0ibW0iIFByb2R1Y3RJZD0iMzMyMjk2MTA5MjMxIj48RGltZW5zaW9uIFg9IjMyIiBZPSI2Ii8+PERldmljZVNpemUgWD0iMS4yIiBZPSIxLjIiLz48U3RlcFNpemUgWD0iMS4zMjA4IiBZPSIxLjM1MTMiLz48TG93ZXJMZWZ0IFg9IjAiIFk9IjAiLz48L0xheW91dD48L0xheW91dHM+PFN1YnN0cmF0ZXM+PFN1YnN0cmF0ZSBTdWJzdHJhdGVUeXBlPSJTdHJpcCIgU3Vic3RyYXRlSWQ9IjAxMDAwMDAwMDAwMDAwOTEiPjxMb3RJZD5OMFA3Mjg0ODAwMDA8L0xvdElkPjxDYXJyaWVyVHlwZT48L0NhcnJpZXJUeXBlPjxDYXJyaWVySWQ+PC9DYXJyaWVySWQ+PFNsb3ROdW1iZXI+MTwvU2xvdE51bWJlcj48U3Vic3RyYXRlTnVtYmVyPjE8L1N1YnN0cmF0ZU51bWJlcj48R29vZERldmljZXM+MTkyPC9Hb29kRGV2aWNlcz48U3VwcGxpZXJOYW1lPjwvU3VwcGxpZXJOYW1lPjxTdGF0dXM+PC9TdGF0dXM+PENyZWF0ZURhdGU+MjAxODA5MDUxMDA5MDgwMDwvQ3JlYXRlRGF0ZT48TGFzdE1vZGlmaWVkPjIwMTgwOTA1MTAwOTA4MDA8L0xhc3RNb2RpZmllZD48QWxpYXNJZHM+PEFsaWFzSWQgVHlwZT0iUHJvZHVjdCIgVmFsdWU9IjMzMjI5NjEwOTIzMSIvPjwvQWxpYXNJZHM+PC9TdWJzdHJhdGU+PC9TdWJzdHJhdGVzPjxTdWJzdHJhdGVNYXBzPjxTdWJzdHJhdGVNYXAgTGF5b3V0U3BlY2lmaWVyPSJTdHJpcE1hcC9EaWVNYXRyaXgiIFN1YnN0cmF0ZVR5cGU9IlN0cmlwIiBTdWJzdHJhdGVTaWRlPSJUb3BTaWRlIiBTdWJzdHJhdGVJZD0iMDEwMDAwMDAwMDAwMDA5MSIgT3JpZW50YXRpb249IjAiIE9yaWdpbkxvY2F0aW9uPSJMb3dlckxlZnQiIEF4aXNEaXJlY3Rpb249IlVwUmlnaHQiPjxPdmVybGF5IE1hcE5hbWU9IlN0cmlwTWFwIiBNYXBWZXJzaW9uPSIxIj48UmVmZXJlbmNlRGV2aWNlcz48UmVmZXJlbmNlRGV2aWNlIE5hbWU9Ik9mZnNldCI+PENvb3JkaW5hdGVzIFg9IjEiIFk9IjEiLz48L1JlZmVyZW5jZURldmljZT48L1JlZmVyZW5jZURldmljZXM+PEJpbkNvZGVNYXAgQmluVHlwZT0iSGV4YURlY2ltYWwiIE51bGxCaW49IkZGIj48QmluRGVmaW5pdGlvbnM+PEJpbkRlZmluaXRpb24gQmluQ29kZT0iMDEiIEJpbkRlc2NyaXB0aW9uPSJCSU4xIiBCaW5Db3VudD0iMTkyIiBCaW5RdWFsaXR5PSJVZ2x5IiBQaWNrPSJGYWxzZSIvPjwvQmluRGVmaW5pdGlvbnM+PEJpbkNvZGUgWD0iMCIgWT0iNSI+MDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTwvQmluQ29kZT48QmluQ29kZSBYPSIwIiBZPSI0Ij4wMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxPC9CaW5Db2RlPjxCaW5Db2RlIFg9IjAiIFk9IjMiPjAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDE8L0JpbkNvZGU+PEJpbkNvZGUgWD0iMCIgWT0iMiI+MDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTwvQmluQ29kZT48QmluQ29kZSBYPSIwIiBZPSIxIj4wMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxPC9CaW5Db2RlPjxCaW5Db2RlIFg9IjAiIFk9IjAiPjAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDE8L0JpbkNvZGU+PC9CaW5Db2RlTWFwPjwvT3ZlcmxheT48L1N1YnN0cmF0ZU1hcD48L1N1YnN0cmF0ZU1hcHM+PC9NYXBEYXRhPg=="
+        }
+      },
+      "status": "About to connect :: "
+    },
+    "ATBK.REQ.DUMMY.LOT_INFO.DAESC204": {
+      "type": "ReqResp",
+      "subject": "ATBK.REQ.DUMMY.LOT_INFO.DAESC204",
+      "modelName": "ENR_LM502",
+      "responseJson": {
+        "MESLotInfoResponse": {
+          "errorCode": "",
+          "errorText": "",
+          "lotData": {
+            "lotId": "N0P728480000",
+            "eventTime": "67565",
+            "step_name": "STA1",
+            "finished_product": "576576",
+            "package_name": "8765865",
+            "package_outline": "765756"
+          }
+        }
+      },
+      "status": "About to connect :: "
+    }
+  }
+}

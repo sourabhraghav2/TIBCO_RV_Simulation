@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <script data-require="angular.js@*" data-semver="1.2.13" src="http://code.angularjs.org/1.2.13/angular.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="../app.js"></script>
+<script src="pendingMap.js"></script>
+
+<style type="text/css">
+
+.formInput{
+
+	width: 75%;
+    display: inline;
+    float: right;
+    height: 25px;
+
+
+}
+
+.errorStyle{
+ 	color: #D8000C;
+    
+}
+.column {
+    float: left;
+    width: 50%;
+    
+    height: 715px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.structureButton{
+	width:100%;
+	margin-bottom: 2px;
+}
+h2{
+	padding: 8px;
+	margin: 0px;
+}
+.buttonSet{
+	padding-left:3px;
+	padding-right:3px;
+}
+.activeButton{
+	background-color: #ebf0f5;
+}
+.startButton{
+
+    height: 70px;
+    width: 62px;
+}
+
+</style>
+  </head>
+
+  <body ng-app="app" ng-controller="pendingMap" ng-init="initializeStructure()"  style="background-color: #94b9e03b;">
+  
+  <H1 align="center">Pending Map Dealer</H1>
+  
+     <div class="form-group row" style="padding-left: 24px; width: 60%;height: 100%; float: left; word-wrap: break-word;">
+		  <div class="column" style="background-color:#aaa;">
+		    <h2 style="     background-color: #799bbc;margin: 10px; background-color: #484c5070;">Model  Name:</h2>
+		    <div class="buttonSet" ng-repeat="(key,value) in structure.inputStructure">
+     			<button type="button"  ng-class="$index==structure.selectedModelIndex?'activeButton':''"  class=" structureButton btn btn-outline-secondary" ng-click="selectedModel(structure.inputStructure[key],$index,key)">{{key}}</button>
+     		</div> 
+		  </div>
+		  <div class="column" style="background-color:#bbb;">
+		    <h2 style="    background-color: #799bbc; margin: 10px;background-color: #484c5070;">Mock Mailbox:</h2>
+		    <!-- {{requestList}} -->
+		     <div class=" buttonSet" ng-repeat="(key,value) in structure.requestList" >
+		    	<button type="button"  style="width:70% ;margin-bottom: 2px;" ng-init="buttonStatusList[$index]='>>>'" ng-class="$index==structure.selectedRequestIndex?'activeButton':''" class=" btn btn-outline-secondary" ng-click="selectedRequest(structure.requestList[key],$index,value)">{{value}}</button>
+		    	<button type="button" style="width:25%;margin-bottom: 2px;"  class="  btn btn-outline-secondary" ng-click="uploadRequest(structure.requestList[key],$index,value)">{{buttonStatusList[$index]}}</button>
+		    	
+		    </div> 
+		  </div>
+		
+     {{structure.status}}  
+     </div>
+    
+    <div class="form-group" style="padding: 25px;background-color: #94b9e03b; width: 40%;height: 100%;float: right;">
+		<form>
+		
+		<div class=" row" style=" padding:  17px; background-color: #b4d2f1; border-radius: 13px; ">
+		  <div class="col-md-10">
+		  			<label for="comment">Network:</label>
+				    <input   type="text" class="form-control formInput" ng-model="config.network"><br>
+		  			<label for="comment">PIC Instance:</label>
+				    <input   type="text" class="form-control formInput" ng-model="config.picInstance" ><br>
+
+		  </div>
+		  <div class="col-md-2">
+		  	<button type="submit" class="btn startButton "ng-click="initApp(config)">Start</button>
+		 </div>
+		</div><div class=" row" style=" padding:  17px; background-color: #b4d2f1; border-radius: 13px; ">
+		  <div class="col-md-10">
+		  			<label for="comment">Network:</label>
+				    <input   type="text" class="form-control formInput" ng-model="config.rvNetwork"><br>
+		  			<label for="comment">Service:</label>
+				    <input   type="text" class="form-control formInput" ng-model="config.rvService" ><br>
+				    <label for="comment">Deamon:</label>
+				    <input   type="text" class="form-control formInput" ng-model="config.rvDeamon" ><br>
+
+		  </div>
+		  <div class="col-md-2">
+		  	
+		 </div>
+		</div>
+		<br>
+		
+		<label class="radio-inline"><input type="radio" ng-model="form.type" name="type" value="mbxXact">Mbx_xact</label>
+		<label class="radio-inline"><input type="radio" ng-model="form.type" name="type" value="putr">putr</label>
+		<label class="radio-inline"><input type="radio" ng-model="form.type" name="type" value="put">put</label>
+		<br>
+		<br>		
+		<label for="comment">Model Name:</label>
+	    <input   type="text" class="form-control formInput" ng-model="form.modelName" ><br>
+	    <label for="comment">Mock Mailbox:</label>
+	    <input   type="text" class="form-control formInput" ng-model="form.reqName" ><br>
+		<br>
+		<br>		
+		<label for="comment">Mailbox name:</label>
+	    <input   type="text" class="form-control formInput" ng-model="form.mbxName" ><br>
+		<label for="comment">Request Data:</label>
+	    <textarea class="form-control" rows="5" id="comment" ng-model="form.mbxInputData"></textarea>
+	    <button type="submit" class="btn btn-outline-secondary"ng-click="sendRequest(form,config)">Send Request </button>
+		
+		<!-- <button ng-click="request(input)">Request data</button> -->
+		
+		<div style=" display:  inline; float:  right; width:  70%; padding-top: 8px; " ng-class=" form.error ? 'errorStyle' : ''"> Status : {{form.status}}  </div>
+		<div ng-show="waiting"> Waiting : {{form.waiting}} </div>
+		<div ng-show="message"> Alert  : {{form.message}}  </div>
+	
+		<br>
+		<label for="comment">Response Data:</label>
+		<textarea class="form-control" rows="5" id="comment" ng-model="form.responseJson"></textarea>
+		<button type="submit" class="btn btn-outline-secondary"ng-click="addRequest(form)">Save </button>
+		</form>
+    </div>
+  </body>
+
+</html>

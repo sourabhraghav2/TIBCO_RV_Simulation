@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <script data-require="angular.js@*" data-semver="1.2.13" src="http://code.angularjs.org/1.2.13/angular.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ 	<script src="../app.js"></script>
+ 	<script src="wafer.js"></script>
+  </head>
+
+  <body ng-app="app" ng-controller="vfei">
+  
+    
+   
+    
+    <div class="form-group" style="padding: 25px;background-color: #94b9e03b; width: 100%;height: 100%;position: fixed;">
+    
+		<H1 align="center">Log Vfei To Gemsim Vfei Converter</H1>  
+      <label for="comment">Input:</label>
+      <textarea class="form-control" rows="5" id="comment" ng-model="input" style="margin-bottom: 10px;     "></textarea>
+      <input ng-model="divLength">
+      <button type="button" class="btn btn-outline-secondary"ng-click="request(input,divLength)">Convert</button>
+      <!-- <button ng-click="request(input)">Request data</button> -->
+      <div> Status : {{status}}</div>
+	  <div ng-show="message"> Alert  : {{message}}</div>
+      <br>
+      <label for="comment">Output:</label>
+      <textarea  style ="font-size: 5px;" class="form-control" rows="400" id="comment" ng-model="output"></textarea>
+    </div>
+  </body>
+
+</html>

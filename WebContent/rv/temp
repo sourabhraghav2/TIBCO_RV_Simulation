@@ -1,0 +1,1 @@
+mbx_when_reply equip_box $command [list ESEC2100XP_PLUS_ei_put_S14F2 $spname 1 na] "" 30000
